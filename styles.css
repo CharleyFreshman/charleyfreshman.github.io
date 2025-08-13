@@ -31,7 +31,9 @@ body {
         radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
         radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0));
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
     background-repeat: repeat;
     background-size: 200px 200px;
     opacity: 0.5;
@@ -339,3 +341,1518 @@ footer i {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
+
+/* Enhanced Color Variables for Anime Fantasy Style */
+:root {
+    --dark-bg: #050a30;
+    --card-bg: rgba(15, 10, 45, 0.6);
+    --primary-color: #9d4edd;
+    --secondary-color: #4cc9f0;
+    --accent-color: #f72585;
+    --light-text: #f8f9fa;
+    --glow: 0 0 20px rgba(157, 78, 221, 0.8);
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --neon-purple: #9d4edd;
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(157, 78, 221, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,0,255,0.1), rgba(0,255,255,0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px var(--neon-purple), 0 0 15px var(--neon-blue);
+    border-color: var(--neon-blue);
+}
+
+.gallery-img:hover::before {
+    opacity: 1;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(26, 26, 46, 0.8), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(108, 92, 231, 0.2);
+    margin-top: 3rem;
+    color: #aaa;
+}
+
+footer i {
+    color: var(--accent-color);
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+/* Enhanced Project Card */
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-grid, .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+/* Animated Background Stars Enhancement */
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 190px 150px, #ffffff, rgba(0,0,0,0));
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
