@@ -1,133 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sifan Song - Personal Portfolio</title>
+    <title>Sifan Song - Academic Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <div class="clouds"></div>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-content">
-            <div class="profile-container">
-                <div class="profile-pic-glow"></div>
-                <img src="pictures/6.jpg" alt="Sifan Song Profile" class="profile-pic">
-            </div>
-            <h1 class="animate-float">Sifan Song</h1>
-            <p class="hero-title animate-float-delay">Data Science | AI & Robotics Enthusiast</p>
-            <div class="social-links animate-float-delay-2">
-                <a href="https://github.com/CharleyFreshman" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/Mochitsuki_574" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:sifansong432@qq.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-            </div>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link lang-zh">关于我</a><a href="#about" class="nav-link lang-en hidden">About</a></li>
+                    <li><a href="#experience" class="nav-link lang-zh">项目与经验</a><a href="#experience" class="nav-link lang-en hidden">Experience</a></li>
+                    <li><a href="#education" class="nav-link lang-zh">教育背景</a><a href="#education" class="nav-link lang-en hidden">Education</a></li>
+                    <li><a href="#contact" class="nav-link lang-zh">联系方式</a><a href="#contact" class="nav-link lang-en hidden">Contact</a></li>
+                </ul>
+                <div class="lang-switch">
+                    <button class="lang-btn active" id="lang-zh">中文</button>
+                    <button class="lang-btn" id="lang-en">English</button>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- About Section with Profile -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">About Me</span></h2>
+            <div class="about-header">
+                <div class="profile-container">
+                    <img src="pictures/1.jpeg" alt="Sifan Song Profile" class="profile-pic">
+                </div>
+                <div class="about-info">
+                    <h1>Sifan Song</h1>
+                    <p class="hero-title lang-zh">数据科学 | 可信人工智能研究</p>
+                    <p class="hero-title lang-en hidden">Data Science | Trustworthy AI Research</p>
+                    <p class="contact-info lang-zh">上海财经大学 | 2026届毕业生</p>
+                    <p class="contact-info lang-en hidden">Shanghai University of Finance and Economics | Class of 2026</p>
+                    <div class="social-links">
+                        <a href="https://x.com/Mochitsuki_574" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:sifansong432@qq.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="quick-links">
+                        <a href="https://github.com/CharleyFreshman" target="_blank" class="quick-link">
+                            <i class="fab fa-github"></i>
+                            <span class="lang-zh">GitHub</span>
+                            <span class="lang-en hidden">GitHub</span>
+                        </a>
+                        <a href="pictures/Song sifan-CV new.pdf" target="_blank" class="quick-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="lang-zh">CV</span>
+                            <span class="lang-en hidden">CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I'm Sifan Song, a 2026 graduate from Shanghai University of Finance and Economics, majoring in Data Science but more passionate about AI and Robotics.</p>
-                    <p>For hobbies, I'm an anime enthusiast who loves sci-fi and fantasy genres. I enjoy playing basketball as a guard, and I've recently started learning piano, fond of J-pop and instrumental music.</p>
-                    <p>My MBTI is ISTJ, and I hope you'll appreciate my rational romance and humor!</p>
-                </div>
+                <p class="lang-zh">我是宋思帆，上海财经大学 信息管理与工程学院 数据科学与大数据技术专业 2026届毕业生，2026年8月入读新加坡国立大学 数据科学与机器学习硕士项目。我的研究方向聚焦于可信人工智能，特别关注对抗鲁棒性、AI公平性以及大语言模型的安全性。</p>
+                <p class="lang-en hidden">I am Sifan Song, a 2026 graduate from the School of Information Management & Engineering, Shanghai University of Finance and Economics, majoring in Data Science and Big Data Technology. I will join NUS DSML program in August 2026. My research focuses on Trustworthy AI, with particular interests in adversarial robustness, fairness in AI, and LLM security.</p>
+                <p class="lang-zh">通过参与多项Kaggle竞赛（包括Optiver高频交易预测、Jane Street实时市场预测）以及数维杯数学建模挑战赛，我在机器学习、深度学习和时间序列预测等领域积累了扎实的实践经验。</p>
+                <p class="lang-en hidden">Through participating in Kaggle competitions (Optiver Trading at the Close, Jane Street Real-Time Market Data Forecasting) and the Shuwei Cup Mathematical Modeling Challenge, I have gained solid experience in machine learning, deep learning, and time series prediction.</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
+    <!-- Experience Section -->
+    <section id="experience">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">My Skills</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
+            <h2 class="section-title lang-zh">项目与经验</h2>
+            <h2 class="section-title lang-en hidden">Projects & Experience</h2>
+
+           <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">毕业设计</span>
+                    <span class="experience-title lang-en hidden">Graduation Thesis</span>
+                    <span class="experience-date">2025 - 2026</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-cuttlefish"></i>
-                    <h3>C++</h3>
+                <div class="experience-university lang-zh">上海财经大学</div>
+                <div class="experience-university lang-en hidden">Shanghai University of Finance and Economics</div>
+                <div class="experience-desc lang-zh">基于均值-支持集不确定性集的鲁棒定价模型研究，探讨价格公平约束下的差异化定价策略。</div>
+                <div class="experience-desc lang-en hidden">Robust pricing model based on mean-support uncertainty sets under fairness constraints.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">Kaggle竞赛</span>
+                    <span class="experience-title lang-en hidden">Kaggle Competition</span>
+                    <span class="experience-date">Dec 2025</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-r-project"></i>
-                    <h3>R</h3>
+                <div class="experience-company">SUFE-NLP-25-Autumn-Project-1</div>
+                <div class="experience-desc lang-zh">构建双架构并行系统检测AI生成文本，实现12种攻击方法的对抗训练，最终排名前20%。</div>
+                <div class="experience-desc lang-en hidden">Built dual-architecture system for AI-generated text detection with 12 attack methods, ranked top 20%.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">Kaggle竞赛</span>
+                    <span class="experience-title lang-en hidden">Kaggle Competition</span>
+                    <span class="experience-date">Jun 2025</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL</h3>
+                <div class="experience-company">Optiver - Trading at the Close</div>
+                <div class="experience-desc lang-zh">设计融合BiLSTM、因果膨胀卷积与多头注意力的混合深度学习模型，预测纳斯达克股票收盘价格变动。基于市场微观结构理论构建高频订单簿特征，包括滚动统计量、滞后变量和跨资产信息。</div>
+                <div class="experience-desc lang-en hidden">Designed a hybrid deep learning model combining BiLSTM, causal dilated convolution, and multi-head attention to predict NASDAQ stock closing price movements.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">数维杯数学建模挑战赛</span>
+                    <span class="experience-title lang-en hidden">Shuwei Cup Mathematical Modeling</span>
+                    <span class="experience-date">May 2025</span>
                 </div>
+                <div class="experience-company">Team Leader</div>
+                <div class="experience-desc lang-zh">问题一：选用NCEI气象数据集，采用SARIMA模型预测2026年清明假期各城市降水量和持续时间，进行ADF平稳性检验和Durbin-Watson残差自相关检验。问题二：建立双分支双层LSTM神经网络预测花卉花期，考虑连续均温和有效积温作为判断标准。</div>
+                <div class="experience-desc lang-en hidden">Problem 1: Built SARIMA model to predict precipitation for Qingming holiday 2026. Problem 2: Developed dual-branch LSTM neural network for flowering period prediction.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">Kaggle竞赛</span>
+                    <span class="experience-title lang-en hidden">Kaggle Competition</span>
+                    <span class="experience-date">Dec 2024 - Jan 2025</span>
+                </div>
+                <div class="experience-company">Jane Street Real-Time Market Data Forecasting</div>
+                <div class="experience-desc lang-zh">整合LightGBM和全连接神经网络构建高性能回归模型，处理大规模金融数据（83个特征，4000万+行）。应用PCA降维提高训练效率，通过GridSearchCV优化超参数。</div>
+                <div class="experience-desc lang-en hidden">Developed high-performance regression models using LightGBM and FCNN for large-scale financial data with PCA dimensionality reduction.</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">数智化助理</span>
+                    <span class="experience-title lang-en hidden">Digital Transformation Assistant</span>
+                    <span class="experience-date">Aug 2025</span>
+                </div>
+                <div class="experience-company lang-zh">上海宝钢国际经贸有限公司</div>
+                <div class="experience-company lang-en hidden">Shanghai Baosteel International Economic & Trading Co., Ltd.</div>
+                <div class="experience-desc lang-zh">参与人工智能项目可行性研究，探索AI模型在物流和订单管理中的应用，提升决策效率15%。</div>
+                <div class="experience-desc lang-en hidden">Participated in AI project feasibility studies with Baosight Software for logistics optimization.</div>
+            </div>
+
+             <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title lang-zh">私募基金助理</span>
+                    <span class="experience-title lang-en hidden">Private Fund Assistant</span>
+                    <span class="experience-date">Jan - Apr 2025</span>
+                </div>
+                <div class="experience-company lang-zh">中银国际证券有限公司（上海）资产管理部</div>
+                <div class="experience-company lang-en hidden">Asset Management Department, BOCI Securities Limited, Shanghai, China</div>
+                <div class="experience-desc lang-zh">运用Python和Excel分析私募基金业绩，量化风险收益指标，撰写业绩报告支持投资决策。</div>
+                <div class="experience-desc lang-en hidden">Analyzed private fund performance using Python and Excel, quantified risk-return metrics.</div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
+    <!-- Education Section -->
+    <section id="education">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">My Projects</span></h2>
-            <div class="project-card">
-                <h3>GitHub Portfolio</h3>
-                <p>Check out my projects and contributions on GitHub</p>
-                <a href="https://github.com/CharleyFreshman" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
+            <h2 class="section-title lang-zh">教育背景</h2>
+            <h2 class="section-title lang-en hidden">Education</h2>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <span class="education-title lang-zh">理学硕士</span>
+                    <span class="education-title lang-en hidden">Master of Science</span>
+                    <span class="education-date">Aug 2026 - Present</span>
+                </div>
+                <div class="education-school lang-zh">新加坡国立大学</div>
+                <div class="education-school lang-en hidden">National University of Singapore (NUS)</div>
+                <div class="education-desc lang-zh">数据科学与机器学习 (DSML)</div>
+                <div class="education-desc lang-en hidden">Data Science & Machine Learning</div>
             </div>
-        </div>
-    </section>
 
-    <!-- Photo Gallery Section -->
-    <section class="photo-gallery">
-        <div class="container">
-            <h2 class="section-title"><span class="highlight">Photo Gallery</span></h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="pictures/1.webp" alt="Life Photo 1"></div>
-                <div class="gallery-item"><img src="pictures/2.webp" alt="Life Photo 2"></div>
-                <div class="gallery-item"><img src="pictures/3.png" alt="Life Photo 3"></div>
-                <div class="gallery-item"><img src="pictures/4.jpg" alt="Life Photo 4"></div>
-                <div class="gallery-item"><img src="pictures/5.jpg" alt="Life Photo 5"></div>
-                <div class="gallery-item"><img src="pictures/6.jpg" alt="Life Photo 6"></div>
+            <div class="education-item">
+                <div class="education-header">
+                    <span class="education-title lang-zh">工学学士</span>
+                    <span class="education-title lang-en hidden">Bachelor of Engineering</span>
+                    <span class="education-date">Sep 2022 - Jun 2026</span>
+                </div>
+                <div class="education-school lang-zh">上海财经大学</div>
+                <div class="education-school lang-en hidden">Shanghai University of Finance and Economics</div>
+                <div class="education-desc lang-zh">数据科学与大数据技术 | GPA: 87.85/100 (3.68/4, Top 14%)</div>
+                <div class="education-desc lang-en hidden">Data Science and Big Data Technology | GPA: 87.85/100 (3.68/4, Top 14%)</div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="subsection-title lang-zh">专业技能</h3>
+                <h3 class="subsection-title lang-en hidden">Technical Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">LightGBM/XGBoost</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">Contact Me</span></h2>
-            <div class="contact-info">
+            <h2 class="section-title lang-zh">联系方式</h2>
+            <h2 class="section-title lang-en hidden">Contact</h2>
+            <div class="contact-links">
                 <a href="mailto:sifansong432@qq.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> sifansong432@qq.com
+                    <i class="fas fa-envelope"></i>
+                    <span class="lang-zh">sifansong432@qq.com</span>
+                    <span class="lang-en hidden">sifansong432@qq.com</span>
+                </a>
+                <a href="https://github.com/CharleyFreshman" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span class="lang-zh">GitHub: CharleyFreshman</span>
+                    <span class="lang-en hidden">GitHub: CharleyFreshman</span>
                 </a>
                 <a href="https://x.com/Mochitsuki_574" target="_blank" class="contact-link">
-                    <i class="fab fa-twitter"></i> @Mochitsuki_574
+                    <i class="fab fa-twitter"></i>
+                    <span class="lang-zh">Twitter: @Mochitsuki_574</span>
+                    <span class="lang-en hidden">Twitter: @Mochitsuki_574</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2023 Sifan Song. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <p class="lang-zh">&copy; 2026 Sifan Song. All rights reserved.</p>
+            <p class="lang-en hidden">&copy; 2026 Sifan Song. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Language Switch Script -->
     <script>
-        // Simple parallax effect on scroll
-        window.addEventListener('scroll', function() {
-            const stars = document.querySelector('.stars');
-            const twinkling = document.querySelector('.twinkling');
-            const clouds = document.querySelector('.clouds');
-            const scrollPosition = window.pageYOffset;
+        const langZhBtn = document.getElementById('lang-zh');
+        const langEnBtn = document.getElementById('lang-en');
+        
+        langZhBtn.addEventListener('click', () => {
+            langZhBtn.classList.add('active');
+            langEnBtn.classList.remove('active');
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.lang-zh').forEach(el => el.classList.remove('hidden'));
+            document.documentElement.lang = 'zh-CN';
+        });
 
-            stars.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-            twinkling.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-            clouds.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+        langEnBtn.addEventListener('click', () => {
+            langEnBtn.classList.add('active');
+            langZhBtn.classList.remove('active');
+            document.querySelectorAll('.lang-zh').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
+            document.documentElement.lang = 'en';
         });
     </script>
 </body>
