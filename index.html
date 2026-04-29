@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifan Song - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-pic-glow"></div>
+                <img src="pictures/6.jpg" alt="Sifan Song Profile" class="profile-pic">
+            </div>
+            <h1 class="animate-float">Sifan Song</h1>
+            <p class="hero-title animate-float-delay">Data Science | AI & Robotics Enthusiast</p>
+            <div class="social-links animate-float-delay-2">
+                <a href="https://github.com/CharleyFreshman" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/Mochitsuki_574" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:sifansong432@qq.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">About Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm Sifan Song, a 2026 graduate from Shanghai University of Finance and Economics, majoring in Data Science but more passionate about AI and Robotics.</p>
+                    <p>For hobbies, I'm an anime enthusiast who loves sci-fi and fantasy genres. I enjoy playing basketball as a guard, and I've recently started learning piano, fond of J-pop and instrumental music.</p>
+                    <p>My MBTI is ISTJ, and I hope you'll appreciate my rational romance and humor!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">My Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-cuttlefish"></i>
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-r-project"></i>
+                    <h3>R</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">My Projects</span></h2>
+            <div class="project-card">
+                <h3>GitHub Portfolio</h3>
+                <p>Check out my projects and contributions on GitHub</p>
+                <a href="https://github.com/CharleyFreshman" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Photo Gallery</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="pictures/1.webp" alt="Life Photo 1"></div>
+                <div class="gallery-item"><img src="pictures/2.webp" alt="Life Photo 2"></div>
+                <div class="gallery-item"><img src="pictures/3.png" alt="Life Photo 3"></div>
+                <div class="gallery-item"><img src="pictures/4.jpg" alt="Life Photo 4"></div>
+                <div class="gallery-item"><img src="pictures/5.jpg" alt="Life Photo 5"></div>
+                <div class="gallery-item"><img src="pictures/6.jpg" alt="Life Photo 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Contact Me</span></h2>
+            <div class="contact-info">
+                <a href="mailto:sifansong432@qq.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> sifansong432@qq.com
+                </a>
+                <a href="https://x.com/Mochitsuki_574" target="_blank" class="contact-link">
+                    <i class="fab fa-twitter"></i> @Mochitsuki_574
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Sifan Song. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple parallax effect on scroll
+        window.addEventListener('scroll', function() {
+            const stars = document.querySelector('.stars');
+            const twinkling = document.querySelector('.twinkling');
+            const clouds = document.querySelector('.clouds');
+            const scrollPosition = window.pageYOffset;
+
+            stars.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+            twinkling.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+            clouds.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+        });
+    </script>
+</body>
+</html>
