@@ -14,7 +14,7 @@ if %errorlevel% neq 0 (
     REM 提交更改
     git commit -m "Update academic homepage"
     
-    REM 推送到GitHub Pages仓库的main分支
+    REM 推送到GitHub Pages仓库的main分支；远程分支是 main ！！！
     git push -u origin master:main
 ) else (
     echo 没有文件变更，无需提交。
