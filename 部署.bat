@@ -3,7 +3,7 @@ REM Deploy script - push academic homepage to GitHub Pages
 REM Auto-syncs with remote edits before pushing (推送前自动拉取并 rebase)
 
 set PATH=%PATH%;D:\Git\cmd
-cd /d "D:\TraeCN\Homepage"
+cd /d "D:\TraeCN\Garth\Homepage"
 
 REM Check for changes
 for /f "tokens=*" %%i in ('git status --porcelain') do set CHANGES=%%i
