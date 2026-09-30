@@ -1,6 +1,6 @@
 @echo off
 REM Deploy script - push academic homepage to GitHub Pages
-REM Auto-syncs with remote edits (e.g. made on github.com web UI) before pushing
+REM Auto-syncs with remote edits before pushing (推送前自动拉取并 rebase)
 
 set PATH=%PATH%;D:\Git\cmd
 cd /d "D:\TraeCN\Garth\Homepage"
