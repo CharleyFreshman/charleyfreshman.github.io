@@ -7,7 +7,7 @@ cd /d "D:\TraeCN\Homepage"
 REM Check for changes
 for /f "tokens=*" %%i in ('git status --porcelain') do set CHANGES=%%i
 if defined CHANGES (
-    echo Code has been changed, committing...
+    echo HTML has been changed, committing...
 
     git add -A
 
