@@ -19,7 +19,7 @@ REM Fetch remote and rebase local commits on top (compatible with web edits)
 git fetch origin main
 for /f %%c in ('git rev-list --count master..origin/main') do set BEHIND=%%c
 if defined BEHIND if not "%BEHIND%"=="0" (
-    echo Remote has %BEHIND% newer commit(s), integrating...
+    echo Remote has %BEHIND% newer commits, integrating...
     git rebase origin/main
     if errorlevel 1 (
         echo.
